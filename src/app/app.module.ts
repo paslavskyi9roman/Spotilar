@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { GenreComponent } from './pages/genre/genre.component';
 import { LikedComponent } from './pages/liked/liked.component';
 import { GenresComponent } from './components/genres/genres.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { GenresComponent } from './components/genres/genres.component';
     HeaderComponent,
     GenreComponent,
     LikedComponent,
-    GenresComponent
+    GenresComponent,
+    HomeComponent,
+    NoPageFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,8 @@
 <div class="container">
-  <div class="genre" *ngFor="let genre of genres">{{ genre }}</div>
+  <div class="genre" *ngFor="let genre of genres">
+    <div class="genre">
+      {{ genre.title }} <br />
+      <a [routerLink]="['/genre', genre.title]">link to genre page</a>
+    </div>
+  </div>
 </div>

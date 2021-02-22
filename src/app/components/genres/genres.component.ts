@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./genres.component.scss']
 })
 export class GenresComponent implements OnInit {
-  genres = ['rock', 'metal', 'punk', 'rap', 'pop', 'EDM']
+  genres = [{title: 'rock'}, {title: 'metal'}, {title: 'punk'},  {title: 'rap'}, {title: 'pop'}, {title: 'EDM'},]
 
   constructor() { }
 
