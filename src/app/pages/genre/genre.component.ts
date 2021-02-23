@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../../services/data.service';
+
 @Component({
   selector: 'app-genre',
   templateUrl: './genre.component.html',
@@ -11,7 +12,6 @@ export class GenreComponent implements OnInit {
 
   albums: any;
 
-  
   constructor(private actRoute: ActivatedRoute, private dataService: DataService) {
     console.log('selected genre is ' + this.selectedGenre)
    };
