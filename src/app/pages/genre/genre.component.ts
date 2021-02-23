@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-genre',
@@ -7,13 +8,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./genre.component.scss']
 })
 export class GenreComponent implements OnInit {
-  genre_title: string;
+  selectedGenre = this.actRoute.snapshot.params.id;
 
-  constructor(private actRoute: ActivatedRoute) {
-    this.genre_title = this.actRoute.snapshot.params.id;
-   }
+  albums: any;
+  
+  constructor(private actRoute: ActivatedRoute, private dataService: DataService) {
+    console.log('selected genre is ' + this.selectedGenre)
+   };
 
   ngOnInit(): void {
+    this.dataService.getAlbums().subscribe((albums) => {
+      this.albums = albums['albums']['album'];
+      console.log(`list of all albums ${albums['albums']['album']}`)
+    })
   }
-
+ 
 }

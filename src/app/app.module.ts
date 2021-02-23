@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { LikedComponent } from './components/liked/liked.component';
 
+import { DataService } from './services/data.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +24,10 @@ import { LikedComponent } from './components/liked/liked.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

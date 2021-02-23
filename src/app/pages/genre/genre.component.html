@@ -1,2 +1,11 @@
 <app-header></app-header>
-<p>this is {{ genre_title }}</p>
+<hr />
+<h1>Albums of {{ selectedGenre }}</h1>
+
+<div *ngFor="let album of albums">
+  <hr />
+  <div class="album">
+    <p>{{ album.name }}</p>
+    <p>{{ album.artist.name }}</p>
+  </div>
+</div>
