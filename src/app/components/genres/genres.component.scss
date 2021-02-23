@@ -11,5 +11,8 @@
     width: 300px;
     height: 200px;
     border-radius: 5%;
+    :hover {
+      cursor: pointer;
+    }
   }
 }

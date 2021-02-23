@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    .album {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      background-color: turquoise;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+h1 {
+  text-align: center;
+  margin: 1rem;
+}
