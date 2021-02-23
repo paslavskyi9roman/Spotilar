@@ -17,7 +17,7 @@ export class GenreComponent implements OnInit {
    };
 
   ngOnInit(): void {
-    this.dataService.getAlbums().subscribe((albums) => {
+    this.dataService.getAlbums(this.selectedGenre).subscribe((albums) => {
       this.albums = albums['albums']['album'];
       console.log(`list of all albums ${albums['albums']['album']}`)
     })
