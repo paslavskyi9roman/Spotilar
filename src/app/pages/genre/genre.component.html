@@ -5,9 +5,18 @@
   <div class="album-grid">
     <div *ngFor="let album of albums">
       <div class="album">
-        <p>{{ album.name }}</p>
-        <p>{{ album.artist.name }}</p>
+        <h4>{{ album.name }},</h4>
+        <h5>by {{ album.artist.name }}</h5>
+        <p>{{ album.image["3"]["#text"] }}</p>
       </div>
     </div>
   </div>
 </div>
+
+<!-- style="backgroundImage: {{album.image['3']['#text']}}" -->
+
+<!-- [style.backgroundImage]="album.image['3']['#text']" -->
+
+<!-- [style]="backgroundImage: {{album.image['3']['#text']}}" -->
+
+<!-- [ngStyle]="{ 'backgroundImage': album.image['3']['#text'] }" -->
