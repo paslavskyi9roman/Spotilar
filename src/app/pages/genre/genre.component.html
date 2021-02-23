@@ -1,6 +1,5 @@
 <app-header></app-header>
-<hr />
-<h1>Albums of {{ selectedGenre }}</h1>
+<h1>Albums of {{ selectedGenre }}. Liked albums: {{ likesCounter }}</h1>
 <div class="wrapper">
   <div class="album-grid">
     <div *ngFor="let album of albums">
@@ -13,6 +12,9 @@
         <div class="text">
           <h4>{{ album.name }},</h4>
           <h5>by {{ album.artist.name }}</h5>
+          <button (click)="buttonHandler()">
+            <i [className]="isClicked ? 'fas fa-heart' : 'far fa-heart'"></i>
+          </button>
         </div>
       </div>
     </div>

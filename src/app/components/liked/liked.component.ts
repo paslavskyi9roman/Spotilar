@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-liked',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liked.component.scss']
 })
 export class LikedComponent implements OnInit {
+  likesCountetr = 0;
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

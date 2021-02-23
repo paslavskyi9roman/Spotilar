@@ -12,6 +12,16 @@ export class GenreComponent implements OnInit {
 
   albums: any;
 
+  likesCounter: number = 0;
+
+  isClicked: boolean = false;
+
+  buttonHandler = () => {
+     this.likesCounter += 1
+    this.isClicked = true;
+   
+  };
+
   constructor(private actRoute: ActivatedRoute, private dataService: DataService) {
     console.log('selected genre is ' + this.selectedGenre)
    };
