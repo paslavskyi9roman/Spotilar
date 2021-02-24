@@ -15,8 +15,18 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      .text {
+        visibility: hidden;
+      }
       h5 {
         margin: 1rem 0;
+      }
+    }
+    .album:hover {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.055) !important;
+      .text {
+        visibility: visible;
       }
     }
   }
@@ -24,4 +34,16 @@
 h1 {
   text-align: center;
   margin: 1rem;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+i {
+  color: #fff;
+  font-size: 1.4rem;
 }

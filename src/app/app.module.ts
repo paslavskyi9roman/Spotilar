@@ -8,19 +8,19 @@ import { GenreComponent } from './pages/genre/genre.component';
 import { GenresComponent } from './components/genres/genres.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
-import { LikedComponent } from './components/liked/liked.component';
 
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LikedComponent } from './components/liked/liked.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     GenreComponent,
     GenresComponent,
-    LikedComponent,
     HomeComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
+    LikedComponent
   ],
   imports: [
     BrowserModule,

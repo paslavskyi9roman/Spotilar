@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liked.component.scss']
 })
 export class LikedComponent implements OnInit {
-
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

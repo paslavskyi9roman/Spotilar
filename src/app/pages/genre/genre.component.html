@@ -1,22 +1,22 @@
-<app-header></app-header>
-<hr />
+<app-header [likesCounter]="likesCounter"></app-header>
 <h1>Albums of {{ selectedGenre }}</h1>
 <div class="wrapper">
   <div class="album-grid">
     <div *ngFor="let album of albums">
-      <div class="album">
-        <h4>{{ album.name }},</h4>
-        <h5>by {{ album.artist.name }}</h5>
-        <p>{{ album.image["3"]["#text"] }}</p>
+      <div
+        class="album"
+        [ngStyle]="{
+          backgroundImage: 'url(' + album.image['3']['#text'] + ')'
+        }"
+      >
+        <div class="text">
+          <h4>{{ album.name }},</h4>
+          <h5>by {{ album.artist.name }}</h5>
+          <button (click)="buttonHandler(album)">
+            <i [className]="album.liked ? 'fas fa-heart' : 'far fa-heart'"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- style="backgroundImage: {{album.image['3']['#text']}}" -->
-
-<!-- [style.backgroundImage]="album.image['3']['#text']" -->
-
-<!-- [style]="backgroundImage: {{album.image['3']['#text']}}" -->
-
-<!-- [ngStyle]="{ 'backgroundImage': album.image['3']['#text'] }" -->
