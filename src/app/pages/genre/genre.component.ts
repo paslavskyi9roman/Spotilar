@@ -10,16 +10,13 @@ import { DataService } from '../../services/data.service';
 export class GenreComponent implements OnInit {
   selectedGenre = this.actRoute.snapshot.params.id;
 
-  albums: any;
+  albums: Albums[] = [] 
 
   likesCounter: number = 0;
 
-  isClicked: boolean = false;
-
-  buttonHandler = () => {
-     this.likesCounter += 1
-    this.isClicked = true;
-   
+  buttonHandler = (album: Albums) => {
+    album.liked = !album.liked;
+    this.likesCounter = this.albums.filter(a => a.liked).length;
   };
 
   constructor(private actRoute: ActivatedRoute, private dataService: DataService) {
@@ -33,3 +30,7 @@ export class GenreComponent implements OnInit {
   }
  
 }
+
+export interface Albums {
+  liked: boolean;
+  }
