@@ -10,7 +10,16 @@ nav {
     width: 300px;
   }
 }
-
+.right {
+  position: relative;
+}
 p {
-  color: white;
+  text-align: center;
+  font-weight: bold;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  width: 20px;
 }
