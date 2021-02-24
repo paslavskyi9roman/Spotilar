@@ -6,10 +6,7 @@ import {  Component,Input, OnInit, Output,EventEmitter  } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-//   @Output() searchcriteria = new EventEmitter<String>();
-// searchThis() {
-//     this.searchcriteria.emit(this.searchword)
-// }
+@Input() likesCounter: number;
 
   constructor() { }
 

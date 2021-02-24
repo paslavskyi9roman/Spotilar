@@ -1,5 +1,5 @@
-<app-header></app-header>
-<h1>Albums of {{ selectedGenre }}. Liked albums: {{ likesCounter }}</h1>
+<app-header [likesCounter]="likesCounter"></app-header>
+<h1>Albums of {{ selectedGenre }}</h1>
 <div class="wrapper">
   <div class="album-grid">
     <div *ngFor="let album of albums">

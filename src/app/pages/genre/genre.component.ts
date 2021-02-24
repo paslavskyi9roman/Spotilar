@@ -17,20 +17,28 @@ export class GenreComponent implements OnInit {
   buttonHandler = (album: Albums) => {
     album.liked = !album.liked;
     this.likesCounter = this.albums.filter(a => a.liked).length;
+
+    localStorage.setItem('likesCounter', JSON.stringify(this.likesCounter));
   };
 
+  getLikes() {
+    if (localStorage.getItem('likesCounter') === null) {
+      this.likesCounter = 0;
+    } else {
+      this.likesCounter = JSON.parse(localStorage.getItem('likesCounter'))
+    }
+  }
+
   constructor(private actRoute: ActivatedRoute, private dataService: DataService) {
-    console.log('selected genre is ' + this.selectedGenre)
-   };
+  };
 
   ngOnInit(): void {
     this.dataService.getAlbums(this.selectedGenre).subscribe((albums) => {
       this.albums = albums['albums']['album'];
     })
+    this.getLikes()
   }
- 
 }
-
 export interface Albums {
   liked: boolean;
   }
