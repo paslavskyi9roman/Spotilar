@@ -1,4 +1,5 @@
-import {  Component,Input, OnInit, Output,EventEmitter  } from '@angular/core';
+import {  Component,Input, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +7,29 @@ import {  Component,Input, OnInit, Output,EventEmitter  } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-@Input() likesCounter: number;
+  songs = [];
 
-  constructor() { }
+  trackName : string = '';
+
+  @Input() likesCounter: number;
+
+  constructor( private dataService: DataService) { }
+  
+  runSearch() {
+    this.dataService.searchTrack(this.trackName).subscribe((songs) => {
+      this.songs = songs['results']['trackmatches']['track']
+      console.log(this.songs)
+    })
+  }
+
+  submitHandler(event) {
+    this.trackName = event.target.value;
+    console.log(this.trackName)
+    this.runSearch()
+  }
 
   ngOnInit(): void {
+   
   }
 
 }

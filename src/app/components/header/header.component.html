@@ -1,8 +1,7 @@
 <nav>
   <div class="left">
     <a routerLink="/">Back</a>
-    <!-- filtering inpput -->
-    <input type="text" />
+    <input type="text" (keydown)="submitHandler($event)" />
   </div>
   <div class="right">
     <p>{{ likesCounter }}</p>
