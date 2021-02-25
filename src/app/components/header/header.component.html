@@ -1,11 +1,14 @@
 <nav>
   <div class="left">
     <a routerLink="/">Back</a>
-    <!-- filtering inpput -->
-    <input type="text" />
+    <input type="text" (keydown)="submitHandler($event)" />
   </div>
   <div class="right">
     <p>{{ likesCounter }}</p>
     <app-liked></app-liked>
   </div>
 </nav>
+<div *ngFor="let song of songs">
+  <h4>{{ song.name }}</h4>
+  <h4>{{ songs.artist }}</h4>
+</div>
