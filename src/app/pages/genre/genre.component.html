@@ -1,10 +1,10 @@
 <app-header [likesCounter]="likesCounter"></app-header>
 <h1>Albums of {{ selectedGenre }}</h1>
 <div class="wrapper">
-  <div class="album-grid">
+  <div class="grid">
     <div *ngFor="let album of albums">
       <div
-        class="album"
+        class="album flex-center"
         [ngStyle]="{
           backgroundImage: 'url(' + album.image['3']['#text'] + ')'
         }"

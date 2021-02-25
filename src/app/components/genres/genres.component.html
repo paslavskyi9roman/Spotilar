@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="genre" *ngFor="let genre of genres">
-    <div class="genre" [routerLink]="['/genre', genre.title]">
+  <div class="genre flex-center" *ngFor="let genre of genres">
+    <div class="genre flex-center" [routerLink]="['/genre', genre.title]">
       {{ genre.title }} <br />
     </div>
   </div>

@@ -14,17 +14,15 @@ export class HeaderComponent implements OnInit {
   @Input() likesCounter: number;
 
   constructor( private dataService: DataService) { }
-  
+
   runSearch() {
     this.dataService.searchTrack(this.trackName).subscribe((songs) => {
       this.songs = songs['results']['trackmatches']['track']
-      console.log(this.songs)
     })
   }
 
   submitHandler(event) {
     this.trackName = event.target.value;
-    console.log(this.trackName)
     this.runSearch()
   }
 
