@@ -3,9 +3,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   .genre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     background-color: rgb(87, 176, 248);
     width: 300px;

@@ -1,32 +1,34 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  .album-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-    .album {
-      width: 300px;
-      height: 300px;
-      border-radius: 10px;
-      background-color: turquoise;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      .text {
-        visibility: hidden;
-      }
+  .album {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: turquoise;
+    flex-direction: column;
+    text-align: center;
+    .text {
+      visibility: hidden;
       h5 {
         margin: 1rem 0;
       }
     }
-    .album:hover {
-      cursor: pointer;
-      background: rgba(0, 0, 0, 0.055) !important;
-      .text {
-        visibility: visible;
+  }
+  .album:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.055) !important;
+    .text {
+      visibility: visible;
+      button {
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+        border: none;
+        i {
+          color: #fff;
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -34,16 +36,4 @@
 h1 {
   text-align: center;
   margin: 1rem;
-}
-
-button {
-  height: 50px;
-  width: 50px;
-  background-color: transparent;
-  border: none;
-}
-
-i {
-  color: #fff;
-  font-size: 1.4rem;
 }
